@@ -8,7 +8,10 @@ let smallest = (number) => {
 	for (let i = number - 2; i > 0; i--) {
 		let diff = 	smallestNum % i;
 		if (diff !== 0) {
-			// let multiples = i 
+			// find out how many times it will take to fit evenly into i
+			// that is the number of times we need to adjust by
+
+			// update smallestNum accordingly 
 		}
 	}
 
@@ -16,3 +19,4 @@ let smallest = (number) => {
 }
 
 // unsolved
+// https://projecteuler.net/problem=5
