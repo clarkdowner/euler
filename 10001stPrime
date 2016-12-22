@@ -2,21 +2,22 @@
 
 // What is the 10 001st prime number?
 
-var primeNumber = (upperbound, target) => {
-	let containerObj = {};
+var primeNumber = (target, limit) => {
 	let primes = 0;
-	debugger;
-	for (let i = 2; i <= (upperbound); i++) {
-		if (containerObj[i] === undefined) {
-			primes++;
+	let primeHash = [1, 1];
+	let upperbound = limit || 150000;
+
+	for (let i = 2; i <= upperbound; i++) {
+		if (primeHash[i] === undefined) {
+			primes ++;
 			if (primes === target) {
 				return i;
 			}
-			for (let j = i; j <= Math.sqrt(upperbound); j += j) {
-				containerObj[j] = false;
+			for (let j = i; j <= upperbound; j += i) {
+				primeHash[j] = 1;
 			}
 		}
 	}
-	debugger;
+
 	console.log('Target: ' + target + ' not found within bound. Number of primes: ' + primes);
 }
