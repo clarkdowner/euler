@@ -5,7 +5,8 @@
 var primeNumber = (upperbound, target) => {
 	let containerObj = {};
 	let primes = 0;
-	for (let i = 2; i <= Math.sqrt(upperbound); i++) {
+	debugger;
+	for (let i = 2; i <= (upperbound); i++) {
 		if (containerObj[i] === undefined) {
 			primes++;
 			if (primes === target) {
@@ -16,5 +17,6 @@ var primeNumber = (upperbound, target) => {
 			}
 		}
 	}
+	debugger;
 	console.log('Target: ' + target + ' not found within bound. Number of primes: ' + primes);
 }
