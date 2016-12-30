@@ -9,7 +9,7 @@ var paths = (size) => {
 	let pathCount = 0;
 	// debugger;
 	let counter = (x, y) => {
-
+		// debugger;
 		if (x === size && y === size) {
 			pathCount++;
 			return;
